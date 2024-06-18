@@ -18,7 +18,7 @@ export function Note({ data, ...rest }){
       }
     </Container>
   )
-};
+}
 
 Note.propTypes = {
   data: PropTypes.shape({
