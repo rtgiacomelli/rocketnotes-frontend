@@ -4,6 +4,8 @@ import { api } from "../services/api";
 
 export const AuthContext = createContext({});
 
+import PropTypes from 'prop-types';
+
 function AuthProvider({ children }) {
   const [data, setData] = useState({});
 
@@ -88,6 +90,10 @@ function AuthProvider({ children }) {
     </AuthContext.Provider>
   )
 }
+
+AuthProvider.propTypes = {
+  children: PropTypes.node.isRequired,
+};
 
 function useAuth() {
   const context = useContext(AuthContext);

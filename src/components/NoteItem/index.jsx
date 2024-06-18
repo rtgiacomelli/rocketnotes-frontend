@@ -2,6 +2,8 @@ import { FiPlus, FiX } from 'react-icons/fi';
 
 import { Container } from './styles'
 
+import PropTypes from 'prop-types';
+
 export function NoteItem({ isNew, value, onClick, ...rest }){
   return(
     <Container isNew={isNew}>
@@ -22,3 +24,9 @@ export function NoteItem({ isNew, value, onClick, ...rest }){
     </Container>
   )
 }
+
+NoteItem.propTypes = {
+  isNew: PropTypes.bool.isRequired,
+  value: PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequired,
+};

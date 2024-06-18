@@ -1,5 +1,7 @@
 import { Container } from './styles'
 
+import PropTypes from 'prop-types';
+
 export function TextArea({ value, ...rest }){
   return(
     <Container {...rest}>
@@ -7,3 +9,7 @@ export function TextArea({ value, ...rest }){
     </Container>
   )
 }
+
+TextArea.propTypes = {
+  value: PropTypes.string.isRequired,
+};

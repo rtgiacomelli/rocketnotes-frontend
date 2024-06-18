@@ -1,5 +1,7 @@
 import { Container } from './styles'
 
+import PropTypes from 'prop-types';
+
 export function Input ({ icon: Icon, ...rest }){
   return(
     <Container>
@@ -8,3 +10,7 @@ export function Input ({ icon: Icon, ...rest }){
     </Container>
   )
 }
+
+Input.propTypes = {
+  icon: PropTypes.func,
+};

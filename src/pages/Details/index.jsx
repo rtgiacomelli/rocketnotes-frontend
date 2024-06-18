@@ -36,7 +36,7 @@ export function Details() {
     }
 
     fetchNote();
-  }, []);
+  }, [params.id]);
 
   return (
     <Container>
